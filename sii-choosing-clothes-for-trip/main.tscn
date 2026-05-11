@@ -2,11 +2,98 @@
 
 [ext_resource type="Script" uid="uid://c20qeofqohack" path="res://Scripts/Main.gd" id="1_ig7tw"]
 
-[node name="Main" type="Control" unique_id=1422500116]
-layout_mode = 3
+[node name="Main" type="TabContainer" unique_id=1982201400]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+tab_alignment = 1
+current_tab = 0
 script = ExtResource("1_ig7tw")
+
+[node name="Добавление данных" type="HBoxContainer" parent="." unique_id=2107669168]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Панель управления" type="VBoxContainer" parent="Добавление данных" unique_id=596329369]
+custom_minimum_size = Vector2(231.515, 0.005)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Добавление данных/Панель управления" unique_id=242212474]
+custom_minimum_size = Vector2(0, 20.35)
+layout_mode = 2
+text = "Редактор знаний"
+
+[node name="HSeparator" type="HSeparator" parent="Добавление данных/Панель управления" unique_id=1482414484]
+custom_minimum_size = Vector2(0, 11.005)
+layout_mode = 2
+
+[node name="Подтипы одежды" type="Button" parent="Добавление данных/Панель управления" unique_id=1618836378]
+custom_minimum_size = Vector2(0, 21.465)
+layout_mode = 2
+text = "Подтипы одежды"
+
+[node name="HSeparator2" type="HSeparator" parent="Добавление данных/Панель управления" unique_id=708216684]
+layout_mode = 2
+
+[node name="Типы одежды" type="Button" parent="Добавление данных/Панель управления" unique_id=669893424]
+layout_mode = 2
+text = "Типы одежды"
+
+[node name="Button" type="Button" parent="Добавление данных/Панель управления" unique_id=709195223]
+visible = false
+layout_mode = 2
+text = "Проверка знаний"
+
+[node name="VSeparator" type="VSeparator" parent="Добавление данных" unique_id=882831100]
+custom_minimum_size = Vector2(15.625, 0)
+layout_mode = 2
+
+[node name="Редактор" type="VBoxContainer" parent="Добавление данных" unique_id=1359302824]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Подпись редактора" type="Label" parent="Добавление данных/Редактор" unique_id=965705086]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Добавление данных/Редактор" unique_id=600718693]
+custom_minimum_size = Vector2(0, 19.06)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Добавление данных/Редактор" unique_id=4793132]
+layout_mode = 2
+
+[node name="Подбор одежды" type="Control" parent="." unique_id=1523228125]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Кнопки выбора роли" type="VBoxContainer" parent="Подбор одежды" unique_id=921891712]
+custom_minimum_size = Vector2(233.04, 131.67)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonAdmin" type="Button" parent="Подбор одежды/Кнопки выбора роли" unique_id=729513538]
+custom_minimum_size = Vector2(0, 18.695)
+layout_mode = 2
+text = "Админимтратор (добавить данные)"
+
+[node name="HSeparator" type="HSeparator" parent="Подбор одежды/Кнопки выбора роли" unique_id=869945282]
+custom_minimum_size = Vector2(0, 14.51)
+layout_mode = 2
+
+[node name="ButtonUser" type="Button" parent="Подбор одежды/Кнопки выбора роли" unique_id=904923839]
+custom_minimum_size = Vector2(0, 18.695)
+layout_mode = 2
+text = "Пользователь (подобрать одежду)"
